@@ -1,8 +1,18 @@
 import React, { Component } from 'react';
 import BookShelf from '../components/BookShelf';
 import FindAddBook from '../components/FindAddBook';
+import * as BooksAPI from '../BooksAPI'
 
 class Home extends Component {
+    async componentDidMount() {
+        try {
+            const books = await BooksAPI.getAll();
+            console.log(books)
+        }
+        catch(error) {
+            console.log(error)
+        }
+    }
     render() {
         return (          
             <div className="list-books">
