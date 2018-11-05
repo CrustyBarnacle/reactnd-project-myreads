@@ -9,7 +9,7 @@ class Home extends Component {
     async componentDidMount() {
         try {
             const books = await BooksAPI.getAll();
-            console.log()
+            console.log(books)
         }
         catch(error) {
             console.log(error)
