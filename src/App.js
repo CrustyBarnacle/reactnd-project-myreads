@@ -1,11 +1,11 @@
 import React from 'react'
-// import BookShelf from './components/BookShelf';
-// import FindAddBook from './components/FindAddBook';
 import { Route } from 'react-router-dom'
+
+import './App.css';
+
 import Home from "./views/Home";
 import Search from "./views/Search";
 // import * as BooksAPI from './BooksAPI'
-import './App.css';
 
 
 class BooksApp extends React.Component {
