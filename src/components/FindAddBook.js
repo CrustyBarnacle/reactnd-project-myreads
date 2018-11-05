@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-
+import Search from "../views/Search"
 
 class FindAddBook extends Component {
     render() {
         return (
         <div className="open-search">
-          <a onClick={() => this.setState({ showSearchPage: true })}>Add a book</a>
+          <a href="/search">Add a book</a>
         </div>
     )}
 }

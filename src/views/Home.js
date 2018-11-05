@@ -20,13 +20,15 @@ class Home extends Component {
                 <div className="list-books-title">
                   <h1>MyReads</h1>
                 </div>
-                <div className="list-books-content">    
-                    <BookShelf title="Currently Reading"/>
-                    <BookShelf title="Want To Read"/>
-                    <BookShelf title="Read"/>
-                    <div>
-                        <FindAddBook />
+                <div className="list-books-content">
+                    <div>    
+                        <BookShelf title="Currently Reading"/>
+                        <BookShelf title="Want To Read"/>
+                        <BookShelf title="Read"/>
                     </div>
+                </div>
+                <div className="open-search">
+                    <FindAddBook />
                 </div>
             </div>
         )}
