@@ -87,6 +87,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Resources
 * Forrest Walker's [Udacity Project 6 Walk Through](https://www.youtube.com/watch?v=bpKI3R0nf7E)
+** Decided to use Ryan's walk through, as Forrest was implementing this using the Context npm library,
+	making this unnecessarily complicated (IMHO).
 * Ryan Waite's [FEND Project 6 Walk Through](https://www.youtube.com/watch?v=acJHkd6K5kI)
 
 
