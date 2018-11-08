@@ -13,17 +13,17 @@ class Home extends Component {
         }
     }
     
-componentDidMount() {
-    try {
-        BooksAPI.getAll()
-        .then(response => {
-            this.setState({ books: response});
-        });
+    componentDidMount() {
+        try {
+            BooksAPI.getAll()
+            .then(response => {
+                this.setState({ books: response});
+            });
+        }
+        catch(error) {
+            console.log(error)
+        }
     }
-    catch(error) {
-        console.log(error)
-    }
-}
     render() {
         return (          
             <div className="list-books">

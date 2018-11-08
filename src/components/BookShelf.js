@@ -16,7 +16,8 @@ class BookShelf extends Component {
             </ol>
           </div>
         </section>
-        )}
+        );
+    }
 }
 
 export default BookShelf
