@@ -1,6 +1,8 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 
+import * as BooksAPI from 'BooksAPI';
+
 import './App.css';
 
 import Home from "./views/Home";
@@ -8,6 +10,10 @@ import Search from "./views/Search";
 
 
 class BooksApp extends React.Component {
+
+  updateBook(book, shelf) {
+    
+  }
 
   render() {
     return (

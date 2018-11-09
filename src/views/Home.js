@@ -12,6 +12,7 @@ class Home extends Component {
             books: []
         }
     }
+
     
     componentDidMount() {
         try {
@@ -24,6 +25,8 @@ class Home extends Component {
             console.log(error)
         }
     }
+
+
     render() {
         return (          
             <div className="list-books">
