@@ -90,7 +90,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ** Decided to use Ryan's walk through, as Forrest was implementing this using the Context npm library,
 	making this unnecessarily complicated (IMHO).
 * Ryan Waite's [FEND Project 6 Walk Through](https://www.youtube.com/watch?v=acJHkd6K5kI)
-
+** Updated the tutorial's use of mixed operators (`&&, ||` ) to use the ternary opearator (`?, :`).
 
 ## Contributing
 
