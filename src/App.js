@@ -9,10 +9,6 @@ import Search from "./views/Search";
 
 class BooksApp extends React.Component {
 
-  updateBook(book, shelf) {
-    
-  }
-
   render() {
     return (
       <div className="app">
