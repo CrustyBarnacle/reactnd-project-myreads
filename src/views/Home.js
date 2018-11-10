@@ -29,7 +29,7 @@ class Home extends Component {
         BooksAPI.update(book, shelf).then(response => {
             book.shelf = shelf;
             this.setState(state => ({
-                books: state.books.filter(b => b.id === book.id).concat([book])
+                books: state.books.filter(b => b.id !== book.id).concat([book])
             }));
         });
     }
