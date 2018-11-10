@@ -91,6 +91,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 	making this unnecessarily complicated (IMHO).
 * Ryan Waite's [FEND Project 6 Walk Through](https://www.youtube.com/watch?v=acJHkd6K5kI)
 ** Updated the tutorial's use of mixed operators (`&&, ||` ) to use the ternary opearator (`?, :`).
+* Łukasz Wróbel's [tmux Tutorial - Split Terminal Windows Easily](https://lukaszwrobel.pl/blog/tmux-tutorial-split-terminal-windows-easily/)
 
 ## Contributing
 

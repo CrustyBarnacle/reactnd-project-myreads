@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import * as BooksAPI from '../BooksAPI'
 
+import Book from '../components/Book'
 
 class Search extends Component {
     constructor(props) {
         super(props);
         this.state = {
             books: [],
-            results: []
+            results: [],
+            query: ""
         }
     }
     
@@ -33,18 +35,43 @@ class Search extends Component {
         });
     }
     
+    updateQuery = (query) => {
+        this.setState({query: query}, this.submitSearch);
+    }
+    
+    submitSearch() {
+        if(this.state.query === '' || this.state.query === undefined) {
+            return this.setState({ results: [] });
+        }
+        BooksAPI.search(this.state.query.trim())
+        .then(response => {
+            console.log(response);
+            if(response.error) {
+                return this.setState({ results: [] });
+            }
+            else {
+                return this.setState({ results: response});
+            }
+        });
+    }
+    
     render() {
         return (
             <div className="search-books">
               <div className="search-books-bar">
                 <Link className="close-search" to="/">Close</Link>
                 <div className="search-books-input-wrapper">
-                  <input type="text" placeholder="Search by title or author"/>
+                  <input type="text" placeholder="Search by title or author" value={this.state.query}
+                  onChange={(event) => this.updateQuery(event.target.value)} />
 
                 </div>
               </div>
               <div className="search-books-results">
-                <ol className="books-grid"></ol>
+                <ol className="books-grid">
+                {
+                    this.state.results.map((item, key) => <Book key={"book_" + key} book={item} />)
+                }
+                </ol>
               </div>
             </div>
         )
