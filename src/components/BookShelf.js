@@ -11,13 +11,12 @@ class BookShelf extends Component {
             <ol className="books-grid">
                 {
                   this.props.books.map(
-                      (book, key) => <Book book={book} key={"book_" + key} />)
+                      (book, key) => <Book updateBook={this.props.updateBook} book={book} key={"book_" + key} />)
                 }
             </ol>
           </div>
         </section>
-        );
-    }
+        )}
 }
 
 export default BookShelf
