@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 
 
 class Book extends Component {
+    author = this.props.book.authors ? this.props.book.authors[0] : "No author found...";
+       
+    
     render() {
         return (
         <li>
@@ -25,7 +28,7 @@ class Book extends Component {
               </div>
             </div>
             <div className="book-title">{this.props.book.title}</div>
-            <div className="book-authors">{this.props.book.authors[0] || "No Author Found..."}</div>
+            <div className="book-authors">{this.author}</div>
           </div>
         </li>
         )

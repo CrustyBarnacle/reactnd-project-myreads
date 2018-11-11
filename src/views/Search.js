@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+
 import * as BooksAPI from '../BooksAPI'
 
 import Book from '../components/Book'
@@ -50,6 +51,11 @@ class Search extends Component {
                 return this.setState({ results: [] });
             }
             else {
+                response.forEach(b => {
+                    let find = this.state.books.filter(B => B.id === b.id);
+                    console.log(find);
+                    b.shelf = find[0] ? find.shef : null;
+                });
                 return this.setState({ results: response});
             }
         });
