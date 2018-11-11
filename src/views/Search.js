@@ -46,7 +46,6 @@ class Search extends Component {
         }
         BooksAPI.search(this.state.query.trim())
         .then(response => {
-            console.log(response);
             if(response.error) {
                 return this.setState({ results: [] });
             }
